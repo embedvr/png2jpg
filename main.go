@@ -55,11 +55,11 @@ func main() {
 		if strings.HasSuffix(info.Name(), ".png") {
 			i, err := bimg.Read(path)
 			if err != nil {
-				log.Fatalln("| " + err.Error())
+				log.Println("| " + err.Error())
 			}
 			i, err = bimg.NewImage(i).Convert(bimg.JPEG)
 			if err != nil {
-				log.Fatalln("| " + err.Error())
+				log.Println("| " + err.Error())
 			}
 
 			if bimg.NewImage(i).Type() == "jpeg" {
